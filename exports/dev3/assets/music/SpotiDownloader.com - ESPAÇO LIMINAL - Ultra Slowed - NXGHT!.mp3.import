@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://yxostctnojh1"
+path="res://.godot/imported/SpotiDownloader.com - ESPAÇO LIMINAL - Ultra Slowed - NXGHT!.mp3-aac4b38b027b075ebf47b624fa1271d6.mp3str"
+
+[deps]
+
+source_file="res://exports/dev3/assets/music/SpotiDownloader.com - ESPAÇO LIMINAL - Ultra Slowed - NXGHT!.mp3"
+dest_files=["res://.godot/imported/SpotiDownloader.com - ESPAÇO LIMINAL - Ultra Slowed - NXGHT!.mp3-aac4b38b027b075ebf47b624fa1271d6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

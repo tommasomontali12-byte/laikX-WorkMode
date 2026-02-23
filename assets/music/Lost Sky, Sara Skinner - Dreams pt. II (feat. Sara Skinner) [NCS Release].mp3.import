@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dfbfb81ahslai"
+path="res://.godot/imported/Lost Sky, Sara Skinner - Dreams pt. II (feat. Sara Skinner) [NCS Release].mp3-463fcbb6511109cc57385216c6461346.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Lost Sky, Sara Skinner - Dreams pt. II (feat. Sara Skinner) [NCS Release].mp3"
+dest_files=["res://.godot/imported/Lost Sky, Sara Skinner - Dreams pt. II (feat. Sara Skinner) [NCS Release].mp3-463fcbb6511109cc57385216c6461346.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

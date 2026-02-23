@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ctdwxcdv4h4s1"]
+
+[ext_resource type="Script" uid="uid://cy8wi0ptkn0y5" path="res://reload_needed.gd" id="1_hpen4"]
+
+[node name="AcceptDialog" type="AcceptDialog" unique_id=601938808]
+oversampling_override = 1.0
+title = "Reload Needed"
+initial_position = 2
+size = Vector2i(285, 100)
+visible = true
+ok_button_text = "Restart"
+dialog_text = "To apply changes you need to reload the app"
+script = ExtResource("1_hpen4")
+
+[connection signal="confirmed" from="." to="." method="_on_confirmed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://tifyd2q5ex00"
+path="res://.godot/imported/Janji, Johnning - Heroes Tonight (feat. Johnning) [NCS Release].mp3-5da0cef1db1ffccccc0f002d1d290810.mp3str"
+
+[deps]
+
+source_file="res://exports/dev4/assets/music/Janji, Johnning - Heroes Tonight (feat. Johnning) [NCS Release].mp3"
+dest_files=["res://.godot/imported/Janji, Johnning - Heroes Tonight (feat. Johnning) [NCS Release].mp3-5da0cef1db1ffccccc0f002d1d290810.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

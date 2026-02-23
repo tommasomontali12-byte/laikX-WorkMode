@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://xdsnjemsnnxw"]
+
+[ext_resource type="Script" uid="uid://dfuhq8gm4o6he" path="res://mouse_lock_custom_hotkey_utility.gd" id="1_jysc5"]
+
+[node name="mouseLockCustomHotkeyUtility" type="Window" unique_id=1387268013]
+oversampling_override = 1.0
+title = "MouseLock Custom Hotkey Utility"
+position = Vector2i(0, 36)
+size = Vector2i(500, 500)
+script = ExtResource("1_jysc5")
+
+[node name="background" type="ColorRect" parent="." unique_id=463810466]
+offset_right = 504.0
+offset_bottom = 500.0
+color = Color(0.19434926, 0.19434929, 0.1943492, 1)
+
+[node name="guidance" type="Label" parent="." unique_id=1217868769]
+offset_left = 64.0
+offset_top = 12.0
+offset_right = 449.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 19
+text = "Press the key you want to be the MouseLock HotKey"
+
+[node name="keyDisplayer" type="LineEdit" parent="." unique_id=1928094579]
+offset_left = 197.0
+offset_top = 140.0
+offset_right = 317.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 23
+placeholder_text = "listening..."
+alignment = 1
+editable = false

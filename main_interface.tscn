@@ -1,0 +1,285 @@
+[gd_scene format=3 uid="uid://d3xrlte2i8jv4"]
+
+[ext_resource type="Script" uid="uid://ctuk7g5i4uj56" path="res://main_interface.gd" id="1_6mpp1"]
+[ext_resource type="Texture2D" uid="uid://dmcv1ueegcejt" path="res://assets/backgrounds/raniramli-pattern-3416554_1920.png" id="1_v57av"]
+[ext_resource type="Texture2D" uid="uid://ct478ijlncpr" path="res://assets/logos/laikx.workmodeLogo.png" id="2_rhs15"]
+[ext_resource type="Script" uid="uid://bk34kanifb053" path="res://time_selector.gd" id="3_rhs15"]
+[ext_resource type="StyleBox" uid="uid://34f8n42lix55" path="res://assets/textures/button.tres" id="4_p4uil"]
+[ext_resource type="Script" uid="uid://shk88cyn1dok" path="res://music_player.gd" id="6_a7kfw"]
+[ext_resource type="VideoStream" uid="uid://cbaht514gv1vx" path="res://assets/videos/88207-602915574_medium.ogv" id="6_li4q2"]
+[ext_resource type="Texture2D" uid="uid://ba48ylsll2gtl" path="res://assets/icons/settings_50dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="6_lx6jc"]
+[ext_resource type="Texture2D" uid="uid://c7ifmypopbrms" path="res://assets/icons/play_arrow_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="6_xxucj"]
+[ext_resource type="Texture2D" uid="uid://cg04mwwg1balm" path="res://assets/icons/skip_next_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="7_a7kfw"]
+[ext_resource type="Texture2D" uid="uid://pws6cxde5gqy" path="res://assets/icons/fullscreen_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="7_mepy7"]
+[ext_resource type="Texture2D" uid="uid://dljktw6vf0ehg" path="res://assets/icons/pause_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="8_a00c7"]
+[ext_resource type="Texture2D" uid="uid://cm2qsvyyln3qp" path="res://assets/icons/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="9_jyvhp"]
+[ext_resource type="Texture2D" uid="uid://dyxokec7g4rns" path="res://assets/icons/captive_portal_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="9_udk6n"]
+[ext_resource type="PackedScene" uid="uid://b8m3fl13jnxwl" path="res://browser.tscn" id="12_wbo83"]
+[ext_resource type="PackedScene" uid="uid://cmw511f6iinto" path="res://settings.tscn" id="13_yo2di"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p4uil"]
+
+[node name="mainInterface" type="Control" unique_id=1612106175]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6mpp1")
+
+[node name="background" type="TextureRect" parent="." unique_id=2045320761]
+modulate = Color(0.48606402, 0.29433382, 0.24511313, 1)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 691.2
+texture = ExtResource("1_v57av")
+expand_mode = 5
+
+[node name="topBar" type="ColorRect" parent="." unique_id=619230663]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 64.0
+color = Color(0.23627436, 0.6787775, 0.73221815, 0.29411766)
+
+[node name="Laikx_workmodeLogo" type="Sprite2D" parent="." unique_id=668205643]
+position = Vector2(141.61116, 32.125008)
+scale = Vector2(0.08247869, 0.08247867)
+texture = ExtResource("2_rhs15")
+
+[node name="timeSelector" type="LineEdit" parent="." unique_id=1699524102]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 240.0
+offset_right = 776.0
+offset_bottom = 321.0
+theme_override_font_sizes/font_size = 55
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p4uil")
+text = "25:00"
+placeholder_text = "00:00"
+alignment = 1
+max_length = 8
+flat = true
+script = ExtResource("3_rhs15")
+
+[node name="startButton" type="Button" parent="." unique_id=33997474]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 320.0
+offset_right = 664.0
+offset_bottom = 368.0
+theme_override_styles/normal = ExtResource("4_p4uil")
+theme_override_styles/pressed = ExtResource("4_p4uil")
+theme_override_styles/hover = ExtResource("4_p4uil")
+theme_override_styles/disabled = ExtResource("4_p4uil")
+theme_override_styles/focus = ExtResource("4_p4uil")
+text = "Start!"
+
+[node name="settingsButton" type="Button" parent="." unique_id=763386272]
+layout_mode = 0
+offset_left = 1096.0001
+offset_top = 592.00006
+offset_right = 1152.0001
+offset_bottom = 648.00006
+scale = Vector2(0.93, 0.93)
+icon = ExtResource("6_lx6jc")
+flat = true
+
+[node name="productivityTimer" type="Timer" parent="." unique_id=1988261193]
+
+[node name="pressEnterPopup" type="ColorRect" parent="." unique_id=909602636]
+visible = false
+layout_mode = 0
+offset_left = 384.0
+offset_top = 192.0
+offset_right = 768.0
+offset_bottom = 256.0
+color = Color(0.37254903, 0.2627451, 0.38431373, 0.4745098)
+
+[node name="pressEnterPopupLabel" type="Label" parent="pressEnterPopup" unique_id=477590293]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 384.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 20
+text = "Press ENTER or RETURN to confirm the time"
+
+[node name="pip" type="Node2D" parent="." unique_id=690967915]
+visible = false
+
+[node name="background" type="TextureRect" parent="pip" unique_id=2095038007]
+modulate = Color(0.48606402, 0.29433382, 0.24511313, 1)
+offset_right = 1152.0
+offset_bottom = 691.2
+texture = ExtResource("1_v57av")
+expand_mode = 5
+
+[node name="backgroundVideo" type="VideoStreamPlayer" parent="pip" unique_id=1730975687]
+modulate = Color(0.36282933, 0.36282954, 0.36282933, 1)
+offset_right = 2732.0
+offset_bottom = 1478.2609
+scale = Vector2(0.46, 0.46)
+stream = ExtResource("6_li4q2")
+volume_db = -80.0
+loop = true
+
+[node name="timeRemainingLabel" type="Label" parent="pip" unique_id=1841926971]
+offset_top = 80.0
+offset_right = 1152.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 321
+text = "25:00"
+horizontal_alignment = 1
+
+[node name="progressBar" type="ProgressBar" parent="pip" unique_id=1905073216]
+offset_right = 984.0
+offset_bottom = 26.0
+rounded = true
+show_percentage = false
+
+[node name="musicPlayer" type="Control" parent="pip" unique_id=125061257]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 472.0
+offset_right = 1152.0
+offset_bottom = 632.0
+script = ExtResource("6_a7kfw")
+
+[node name="background" type="ColorRect" parent="pip/musicPlayer" unique_id=1263343481]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 1144.0
+offset_bottom = 160.0
+color = Color(6.545782e-06, 0.7732968, 0.9583823, 0.20392157)
+
+[node name="audioPlayer" type="AudioStreamPlayer2D" parent="pip/musicPlayer" unique_id=1407834224]
+
+[node name="slider" type="HSlider" parent="pip/musicPlayer" unique_id=965608204]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 120.0
+offset_right = 677.3333
+offset_bottom = 136.0
+scale = Vector2(1.5, 1.5)
+
+[node name="duration" type="Label" parent="pip/musicPlayer" unique_id=1052951338]
+layout_mode = 0
+offset_left = 1016.0
+offset_top = 115.0
+offset_right = 1136.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 22
+text = "00:00/00:00"
+
+[node name="songName" type="Label" parent="pip/musicPlayer" unique_id=1034831434]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 32.0
+offset_right = 1040.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 42
+text = "SONG NAME BY AUTHORY"
+
+[node name="play" type="Button" parent="pip/musicPlayer" unique_id=1990961710]
+layout_mode = 0
+offset_left = 1056.0
+offset_top = 40.0
+offset_right = 1088.0
+offset_bottom = 80.0
+icon = ExtResource("6_xxucj")
+flat = true
+icon_alignment = 1
+
+[node name="next" type="Button" parent="pip/musicPlayer" unique_id=495671387]
+layout_mode = 0
+offset_left = 1096.0
+offset_top = 40.0
+offset_right = 1128.0
+offset_bottom = 80.0
+icon = ExtResource("7_a7kfw")
+flat = true
+icon_alignment = 1
+
+[node name="paused" type="ColorRect" parent="pip" unique_id=1019104255]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(1, 1, 1, 0.7607843)
+
+[node name="pausedLabel" type="Label" parent="pip/paused" unique_id=239696124]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 288.0
+offset_right = 678.0
+offset_bottom = 360.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 54
+text = "PAUSED"
+
+[node name="buttonsContainer" type="HBoxContainer" parent="pip" unique_id=1428920570]
+offset_left = 976.0
+offset_right = 1120.0
+offset_bottom = 32.0
+alignment = 2
+
+[node name="pauseButton" type="Button" parent="pip/buttonsContainer" unique_id=207542282]
+layout_mode = 2
+icon = ExtResource("8_a00c7")
+flat = true
+icon_alignment = 1
+
+[node name="browserButton" type="Button" parent="pip/buttonsContainer" unique_id=1545749556]
+layout_mode = 2
+icon = ExtResource("9_udk6n")
+flat = true
+icon_alignment = 1
+
+[node name="fullscreenToggle" type="Button" parent="pip/buttonsContainer" unique_id=1672992726]
+layout_mode = 2
+icon = ExtResource("7_mepy7")
+flat = true
+icon_alignment = 1
+
+[node name="browser" parent="pip" unique_id=517005207 instance=ExtResource("12_wbo83")]
+initial_position = 3
+current_screen = 0
+visible = false
+
+[node name="mouseLockDisclamer" type="ColorRect" parent="pip" unique_id=1780101607]
+visible = false
+offset_top = 32.0
+offset_right = 248.0
+offset_bottom = 120.0
+color = Color(1, 1, 1, 0.2509804)
+
+[node name="Label" type="Label" parent="pip/mouseLockDisclamer" unique_id=1424734319]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 229.0
+offset_bottom = 73.0
+theme_override_font_sizes/font_size = 23
+text = "MouseLock is enabled!!!
+Press F6 to disable it"
+
+[node name="close" type="Button" parent="." unique_id=542278038]
+layout_mode = 0
+offset_left = 1120.0
+offset_right = 1152.0
+offset_bottom = 32.0
+icon = ExtResource("9_jyvhp")
+flat = true
+
+[node name="settings" parent="." unique_id=239694521 instance=ExtResource("13_yo2di")]
+initial_position = 1
+visible = false
+
+[connection signal="editing_toggled" from="timeSelector" to="." method="_on_time_selector_editing_toggled"]
+[connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="settingsButton" to="." method="_on_settings_pressed"]
+[connection signal="timeout" from="productivityTimer" to="." method="_on_productivity_timer_timeout"]
+[connection signal="pressed" from="pip/buttonsContainer/pauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="pip/buttonsContainer/browserButton" to="." method="_on_browser_button_pressed"]
+[connection signal="pressed" from="pip/buttonsContainer/fullscreenToggle" to="." method="_on_fullscreen_toggle_pressed"]
+[connection signal="pressed" from="close" to="." method="_on_close_pressed"]

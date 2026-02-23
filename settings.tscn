@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://cmw511f6iinto"]
+
+[ext_resource type="Script" uid="uid://bqh6cpg5gmlab" path="res://settings.gd" id="1_x2hje"]
+[ext_resource type="PackedScene" uid="uid://ctdwxcdv4h4s1" path="res://reloadNeeded.tscn" id="2_nkug2"]
+
+[node name="settings" type="Window" unique_id=239694521]
+oversampling_override = 1.0
+title = "laikX WorkMode Settings"
+position = Vector2i(0, 36)
+size = Vector2i(728, 400)
+min_size = Vector2i(728, 400)
+max_size = Vector2i(728, 400)
+script = ExtResource("1_x2hje")
+
+[node name="background" type="ColorRect" parent="." unique_id=450671280]
+offset_right = 728.0
+offset_bottom = 400.0
+color = Color(0, 0, 0, 0.3764706)
+
+[node name="settingsLabel" type="Label" parent="." unique_id=113857007]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 84.0
+offset_bottom = 27.0
+text = "SETTINGS"
+
+[node name="settingsContainer" type="VBoxContainer" parent="." unique_id=617721829]
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 720.0
+offset_bottom = 400.0
+
+[node name="videoSectionLabel" type="Label" parent="settingsContainer" unique_id=1660307031]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Video"
+uppercase = true
+
+[node name="customBGGroup" type="HBoxContainer" parent="settingsContainer" unique_id=1720934171]
+layout_mode = 2
+
+[node name="customBGLabel" type="Label" parent="settingsContainer/customBGGroup" unique_id=246320080]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+text = "Custom Background"
+
+[node name="customBGButton" type="Button" parent="settingsContainer/customBGGroup" unique_id=854022058]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+text = "directory"
+alignment = 0
+
+[node name="windowModeGroup" type="HBoxContainer" parent="settingsContainer" unique_id=616658181]
+layout_mode = 2
+
+[node name="windowModeLabel" type="Label" parent="settingsContainer/windowModeGroup" unique_id=798072125]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+text = "Window mode in WorkMode"
+
+[node name="windowModeButton" type="OptionButton" parent="settingsContainer/windowModeGroup" unique_id=1491572166]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Fullscreen"
+popup/item_1/id = 1
+
+[node name="HSeparator" type="HSeparator" parent="settingsContainer" unique_id=1777754584]
+layout_mode = 2
+
+[node name="audioSectionLabel" type="Label" parent="settingsContainer" unique_id=908669535]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Audio"
+uppercase = true
+
+[node name="customMusicGroup" type="HBoxContainer" parent="settingsContainer" unique_id=212552246]
+layout_mode = 2
+
+[node name="customMusicSwitch" type="CheckButton" parent="settingsContainer/customMusicGroup" unique_id=2033104326]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+text = "Custom Music"
+
+[node name="customMusicButton" type="Button" parent="settingsContainer/customMusicGroup" unique_id=1515243643]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+text = "Set Directory"
+alignment = 0
+
+[node name="customMusicFileDialog" type="FileDialog" parent="settingsContainer/customMusicGroup/customMusicButton" unique_id=238608754]
+oversampling_override = 1.0
+title = "Open a Directory"
+ok_button_text = "Select"
+file_mode = 2
+use_native_dialog = true
+
+[node name="AcceptDialog" parent="settingsContainer/customMusicGroup/customMusicButton" unique_id=601938808 instance=ExtResource("2_nkug2")]
+initial_position = 1
+visible = false
+
+[node name="customEndChimeGroup" type="HBoxContainer" parent="settingsContainer" unique_id=913597994]
+layout_mode = 2
+
+[node name="customEndChimeLabel" type="Label" parent="settingsContainer/customEndChimeGroup" unique_id=1252368944]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+text = "Custom End Chime"
+
+[node name="customEndChimeButton" type="Button" parent="settingsContainer/customEndChimeGroup" unique_id=2106871023]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+text = "directory"
+alignment = 0
+
+[node name="HSeparatorTwo" type="HSeparator" parent="settingsContainer" unique_id=100022325]
+layout_mode = 2
+
+[node name="featuresSectionLabel2" type="Label" parent="settingsContainer" unique_id=1040641472]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Features"
+uppercase = true
+
+[node name="mouseLockSwitch" type="CheckButton" parent="settingsContainer" unique_id=139485830]
+layout_mode = 2
+text = "MouseLock"
+
+[node name="customMouseLockHotkeyGroup" type="HBoxContainer" parent="settingsContainer" unique_id=146143740]
+layout_mode = 2
+
+[node name="customMouseLockHotHeyLabel" type="CheckButton" parent="settingsContainer/customMouseLockHotkeyGroup" unique_id=473301898]
+custom_minimum_size = Vector2(665, 0)
+layout_mode = 2
+text = "Custom MouseLock Hotkey"
+
+[node name="customMouseLockHotKeyButton" type="Button" parent="settingsContainer/customMouseLockHotkeyGroup" unique_id=2019896684]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "SET"
+
+[node name="searchEngineSwitch" type="CheckButton" parent="settingsContainer" unique_id=1999115227]
+layout_mode = 2
+text = "Search Engine in WorkMode
+"
+
+[node name="todo1" type="ColorRect" parent="." unique_id=1839074693]
+offset_left = 8.0
+offset_top = 60.0
+offset_right = 720.0
+offset_bottom = 92.0
+color = Color(0, 0, 0, 0.5058824)
+
+[node name="todo2" type="ColorRect" parent="." unique_id=1568465937]
+offset_left = 8.0
+offset_top = 204.0
+offset_right = 720.0
+offset_bottom = 236.0
+color = Color(0, 0, 0, 0.45882353)
+
+[node name="todo3" type="ColorRect" parent="." unique_id=53232718]
+offset_left = 8.0
+offset_top = 308.0
+offset_right = 720.0
+offset_bottom = 380.0
+color = Color(0, 0, 0, 0.4862745)
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="item_selected" from="settingsContainer/windowModeGroup/windowModeButton" to="." method="_on_window_mode_button_item_selected"]
+[connection signal="pressed" from="settingsContainer/customMusicGroup/customMusicSwitch" to="." method="_on_custom_music_switch_pressed"]
+[connection signal="pressed" from="settingsContainer/customMusicGroup/customMusicButton" to="." method="_on_custom_music_button_pressed"]
+[connection signal="dir_selected" from="settingsContainer/customMusicGroup/customMusicButton/customMusicFileDialog" to="." method="_on_file_dialog_dir_selected"]
+[connection signal="pressed" from="settingsContainer/mouseLockSwitch" to="." method="_on_mouse_lock_switch_pressed"]

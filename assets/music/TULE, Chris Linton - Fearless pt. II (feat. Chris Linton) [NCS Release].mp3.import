@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://47fe4wjibx3h"
+path="res://.godot/imported/TULE, Chris Linton - Fearless pt. II (feat. Chris Linton) [NCS Release].mp3-fcc0b19b8033b061ddf2074b4aa65c39.mp3str"
+
+[deps]
+
+source_file="res://assets/music/TULE, Chris Linton - Fearless pt. II (feat. Chris Linton) [NCS Release].mp3"
+dest_files=["res://.godot/imported/TULE, Chris Linton - Fearless pt. II (feat. Chris Linton) [NCS Release].mp3-fcc0b19b8033b061ddf2074b4aa65c39.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

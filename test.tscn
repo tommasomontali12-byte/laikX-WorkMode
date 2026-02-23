@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://l8m7gde0oi4q"]
+
+[ext_resource type="VideoStream" uid="uid://cbaht514gv1vx" path="res://assets/videos/88207-602915574_medium.ogv" id="1_37kl0"]
+
+[node name="Control" type="Control" unique_id=1315003709]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=675958317]
+layout_mode = 0
+offset_right = 2732.0
+offset_bottom = 1440.0
+stream = ExtResource("1_37kl0")
+autoplay = true
