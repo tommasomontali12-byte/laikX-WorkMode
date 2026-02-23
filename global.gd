@@ -10,6 +10,7 @@ var isCustomMouseLockHotKeyEnabled = false
 var customMouseLockHotKey = ""
 var customMusicDirectory = ""
 var isCustomMusicEnabled = false
+var is_dragging = false
 
 #===SAVING=SYSYEM===========
 func save_data():
@@ -42,7 +43,23 @@ func load_data():
 				isFullScreenEnabled=save_data.get("isFullScreenEnabled", isFullScreenEnabled)
 				
 				
+#===dragSystem===============================
+func _input(event):
+	# 1. Check for the initial Left-Click while CTRL is held
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed and Input.is_key_pressed(KEY_CTRL):
+			is_dragging = true
+			# "Consume" the input so buttons underneath don't click accidentally
+			get_viewport().set_input_as_handled()
+		else:
+			is_dragging = false
 
+	# 2. Handle the movement
+	if event is InputEventMouseMotion and is_dragging:
+		# We add the 'relative' movement of the mouse to the current window position
+		var current_pos = DisplayServer.window_get_position()
+		DisplayServer.window_set_position(current_pos + Vector2i(event.relative))
+		
 func _ready() -> void:
 	load_data()
 	
