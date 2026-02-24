@@ -18,6 +18,12 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p4uil"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udk6n"]
+bg_color = Color(0.31764707, 0.31764707, 0.31764707, 0.44705883)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a00c7"]
+bg_color = Color(0.18570247, 0.6612596, 0.79130405, 1)
+
 [node name="mainInterface" type="Control" unique_id=1612106175]
 layout_mode = 3
 anchors_preset = 15
@@ -141,8 +147,11 @@ text = "25:00"
 horizontal_alignment = 1
 
 [node name="progressBar" type="ProgressBar" parent="pip" unique_id=1905073216]
-offset_right = 984.0
-offset_bottom = 26.0
+offset_right = 1016.0
+offset_bottom = 33.0
+theme_override_styles/background = SubResource("StyleBoxFlat_udk6n")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a00c7")
+value = 100.0
 rounded = true
 show_percentage = false
 
