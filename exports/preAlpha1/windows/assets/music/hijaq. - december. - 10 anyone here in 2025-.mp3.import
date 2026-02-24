@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjk84quxp8bex"
+path="res://.godot/imported/hijaq. - december. - 10 anyone here in 2025-.mp3-98ec5bd0f637e8bb707352cb260b73a8.mp3str"
+
+[deps]
+
+source_file="res://exports/preAlpha1/windows/assets/music/hijaq. - december. - 10 anyone here in 2025-.mp3"
+dest_files=["res://.godot/imported/hijaq. - december. - 10 anyone here in 2025-.mp3-98ec5bd0f637e8bb707352cb260b73a8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

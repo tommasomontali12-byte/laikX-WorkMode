@@ -3,6 +3,7 @@ var mouseLockActive = false
 const fullscreenEnable = preload("res://assets/icons/fullscreen_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg")
 const fullscreenDisable = preload("res://assets/icons/fullscreen_exit_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg")
 var timerPaused = false
+
 func _ready() -> void:
 	print(Global.studyTime)
 	$pip.hide()
@@ -28,6 +29,7 @@ func _on_productivity_timer_timeout() -> void:
 	$pip/musicPlayer/audioPlayer.stop()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	$pip.hide()
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	$finishedWindow.show()
 	Global.isProductivityActive=false
 
@@ -55,6 +57,17 @@ func _on_settings_pressed() -> void:
 
 #===MOUSELOCK================================
 func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_close_dialog"):
+		print(1)
+		if Global.isProductivityActive:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+			$productivityTimer.stop()
+			$pip.hide()
+			$pip/musicPlayer/audioPlayer.stop()
+			Global.isProductivityActive=false
+		else:
+			get_tree().quit()
+	
 	if event.is_action_pressed("lockMouse") and Global.isMouseLockEnabled and Global.isProductivityActive and mouseLockActive==false:
 		toggle_mouse_capture()
 		$pip/mouseLockDisclamer.show()
@@ -102,7 +115,7 @@ func _on_fullscreen_toggle_pressed() -> void:
 	
 func _on_close_pressed() -> void:
 	if Global.isProductivityActive:
-		
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		$productivityTimer.stop()
 		$pip.hide()
 		$pip/musicPlayer/audioPlayer.stop()

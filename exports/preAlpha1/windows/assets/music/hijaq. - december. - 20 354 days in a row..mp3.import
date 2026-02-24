@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cb7qltigyu0ah"
+path="res://.godot/imported/hijaq. - december. - 20 354 days in a row..mp3-3ae9fde982447665dcf870bb40d6248f.mp3str"
+
+[deps]
+
+source_file="res://exports/preAlpha1/windows/assets/music/hijaq. - december. - 20 354 days in a row..mp3"
+dest_files=["res://.godot/imported/hijaq. - december. - 20 354 days in a row..mp3-3ae9fde982447665dcf870bb40d6248f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

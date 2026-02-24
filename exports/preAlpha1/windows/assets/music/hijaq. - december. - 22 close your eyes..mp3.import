@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dreq8bv41jyo6"
+path="res://.godot/imported/hijaq. - december. - 22 close your eyes..mp3-9d48f37968c3739f0c34ff154213ad5b.mp3str"
+
+[deps]
+
+source_file="res://exports/preAlpha1/windows/assets/music/hijaq. - december. - 22 close your eyes..mp3"
+dest_files=["res://.godot/imported/hijaq. - december. - 22 close your eyes..mp3-9d48f37968c3739f0c34ff154213ad5b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

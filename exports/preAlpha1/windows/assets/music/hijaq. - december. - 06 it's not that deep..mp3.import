@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cc44w37ifdrx7"
+path="res://.godot/imported/hijaq. - december. - 06 it's not that deep..mp3-ad732537806af368b583922200f38375.mp3str"
+
+[deps]
+
+source_file="res://exports/preAlpha1/windows/assets/music/hijaq. - december. - 06 it's not that deep..mp3"
+dest_files=["res://.godot/imported/hijaq. - december. - 06 it's not that deep..mp3-ad732537806af368b583922200f38375.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b682ysuyy64fx"
+path="res://.godot/imported/hijaq. - december. - 26 don't look back..mp3-e4e1db62d77c989e27b34613faf8577f.mp3str"
+
+[deps]
+
+source_file="res://exports/preAlpha1/windows/assets/music/hijaq. - december. - 26 don't look back..mp3"
+dest_files=["res://.godot/imported/hijaq. - december. - 26 don't look back..mp3-e4e1db62d77c989e27b34613faf8577f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

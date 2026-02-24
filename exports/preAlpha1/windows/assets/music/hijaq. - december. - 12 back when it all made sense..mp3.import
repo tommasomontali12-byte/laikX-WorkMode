@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bw0gnii57anyp"
+path="res://.godot/imported/hijaq. - december. - 12 back when it all made sense..mp3-312c11f74f59cc0dec2d93526ed7832c.mp3str"
+
+[deps]
+
+source_file="res://exports/preAlpha1/windows/assets/music/hijaq. - december. - 12 back when it all made sense..mp3"
+dest_files=["res://.godot/imported/hijaq. - december. - 12 back when it all made sense..mp3-312c11f74f59cc0dec2d93526ed7832c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

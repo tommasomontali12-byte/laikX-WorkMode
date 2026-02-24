@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5ffyoapegyxp"
+path="res://.godot/imported/hijaq. - december. - 21 nostalgia for now..mp3-70357a3d3859414e6460d9f54a5ae7ba.mp3str"
+
+[deps]
+
+source_file="res://exports/preAlpha1/windows/assets/music/hijaq. - december. - 21 nostalgia for now..mp3"
+dest_files=["res://.godot/imported/hijaq. - december. - 21 nostalgia for now..mp3-70357a3d3859414e6460d9f54a5ae7ba.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

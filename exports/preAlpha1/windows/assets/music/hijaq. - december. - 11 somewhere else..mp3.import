@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://covwcgpeck3on"
+path="res://.godot/imported/hijaq. - december. - 11 somewhere else..mp3-96580dab036b7753bf0ae95c3be072c4.mp3str"
+
+[deps]
+
+source_file="res://exports/preAlpha1/windows/assets/music/hijaq. - december. - 11 somewhere else..mp3"
+dest_files=["res://.godot/imported/hijaq. - december. - 11 somewhere else..mp3-96580dab036b7753bf0ae95c3be072c4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

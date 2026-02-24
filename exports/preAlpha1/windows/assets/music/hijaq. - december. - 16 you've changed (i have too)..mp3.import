@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qfabyoiad6c3"
+path="res://.godot/imported/hijaq. - december. - 16 you've changed (i have too)..mp3-a0cd72e46a21fa8dbb144ff047180b7c.mp3str"
+
+[deps]
+
+source_file="res://exports/preAlpha1/windows/assets/music/hijaq. - december. - 16 you've changed (i have too)..mp3"
+dest_files=["res://.godot/imported/hijaq. - december. - 16 you've changed (i have too)..mp3-a0cd72e46a21fa8dbb144ff047180b7c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

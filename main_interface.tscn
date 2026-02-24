@@ -115,7 +115,6 @@ theme_override_font_sizes/font_size = 20
 text = "Press ENTER or RETURN to confirm the time"
 
 [node name="pip" type="Node2D" parent="." unique_id=690967915]
-visible = false
 
 [node name="background" type="TextureRect" parent="pip" unique_id=2095038007]
 modulate = Color(0.48606402, 0.29433382, 0.24511313, 1)
@@ -189,6 +188,7 @@ offset_right = 1040.0
 offset_bottom = 88.0
 theme_override_font_sizes/font_size = 42
 text = "SONG NAME BY AUTHORY"
+clip_text = true
 
 [node name="play" type="Button" parent="pip/musicPlayer" unique_id=1990961710]
 layout_mode = 0

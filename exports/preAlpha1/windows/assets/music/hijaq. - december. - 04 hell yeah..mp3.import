@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dr5t0ghlcv7qe"
+path="res://.godot/imported/hijaq. - december. - 04 hell yeah..mp3-aa999658287e35c9ebf6914305ff67ed.mp3str"
+
+[deps]
+
+source_file="res://exports/preAlpha1/windows/assets/music/hijaq. - december. - 04 hell yeah..mp3"
+dest_files=["res://.godot/imported/hijaq. - december. - 04 hell yeah..mp3-aa999658287e35c9ebf6914305ff67ed.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

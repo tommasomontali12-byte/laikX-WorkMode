@@ -1,7 +1,7 @@
 extends Control
 
 ## Configuration
-@export_dir var music_directory: String = "assets/music/"
+@export_dir var music_directory: String = "res://assets/music/"
 @export var fade_duration: float = 1.2
 
 ## Icons
@@ -57,8 +57,8 @@ func _check_music_source_changed() -> void:
 
 func _handle_productivity_logic() -> void:
 	if Global.isProductivityActive:
-		# Only auto-start if the user hasn't manually paused
-		if not audio_player.playing and not is_fading and not manually_paused:
+		# Check stream_paused too — Godot 4 reports playing=false when paused
+		if not audio_player.playing and not audio_player.stream_paused and not is_fading and not manually_paused:
 			play_random_song()
 	elif audio_player.playing and not is_fading:
 		fade_out_and_stop()
@@ -114,7 +114,6 @@ func _load_audio_stream(path: String) -> AudioStream:
 			push_warning("MusicPlayer: Unsupported audio format: %s" % ext)
 			return null
 
-## Plays a random song. Does NOT check isProductivityActive so buttons always work.
 func play_random_song() -> void:
 	if playlist.is_empty():
 		return
@@ -148,10 +147,11 @@ func _update_ui() -> void:
 	else:
 		play_button.icon = ICON_PLAY
 
-	if audio_player.playing and not user_is_dragging:
+	if (audio_player.playing or audio_player.stream_paused) and not user_is_dragging:
 		var pos = audio_player.get_playback_position()
 		var length = audio_player.stream.get_length()
-		slider.value = pos
+		# set_value_no_signal prevents firing drag/change signals every frame
+		slider.set_value_no_signal(pos)
 		duration_label.text = "%s / %s" % [_format_time(pos), _format_time(length)]
 
 func _format_time(seconds: float) -> String:
@@ -189,17 +189,14 @@ func fade_out_and_next() -> void:
 ## --- Signal Handlers ---
 
 func _on_play_pressed() -> void:
-	if audio_player.playing:
-		# Toggle pause/resume
-		audio_player.stream_paused = not audio_player.stream_paused
-		manually_paused = audio_player.stream_paused
-	elif audio_player.stream != null and audio_player.stream_paused:
-		# Resume from a stopped+paused state
+	# Must check stream_paused first — Godot 4 reports playing=false while paused
+	if audio_player.stream_paused:
 		audio_player.stream_paused = false
-		audio_player.play()
 		manually_paused = false
+	elif audio_player.playing:
+		audio_player.stream_paused = true
+		manually_paused = true
 	else:
-		# Nothing loaded or playing — start fresh
 		play_random_song()
 
 func _on_next_pressed() -> void:

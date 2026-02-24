@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3gqph7lnsty8"
+path="res://.godot/imported/hijaq. - december. - 03 calm..mp3-204619da4cc4597c672469bb46c61a50.mp3str"
+
+[deps]
+
+source_file="res://exports/preAlpha1/windows/assets/music/hijaq. - december. - 03 calm..mp3"
+dest_files=["res://.godot/imported/hijaq. - december. - 03 calm..mp3-204619da4cc4597c672469bb46c61a50.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

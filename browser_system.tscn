@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bner1sgbcfimt"]
+
+[ext_resource type="Script" uid="uid://cagqy4v88lgm5" path="res://browser_system.gd" id="1_041py"]
+
+[node name="browserSystem" type="Window" unique_id=518954035]
+oversampling_override = 1.0
+title = "LCBS (browser)"
+initial_position = 2
+size = Vector2i(800, 400)
+script = ExtResource("1_041py")
+
+[node name="topBar" type="ColorRect" parent="." unique_id=2042233029]
+offset_right = 800.0
+offset_bottom = 40.0
+color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+
+[node name="CefTexture" type="CefTexture" parent="." unique_id=1824474437]
+background_color = Color(0.18000486, 0.1800049, 0.1800048, 1)
+offset_top = 44.0
+offset_right = 801.0
+offset_bottom = 400.0

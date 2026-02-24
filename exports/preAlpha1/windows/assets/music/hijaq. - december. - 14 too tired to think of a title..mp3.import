@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://daehvcdkrs4hs"
+path="res://.godot/imported/hijaq. - december. - 14 too tired to think of a title..mp3-d6953df72b4c78c8820b9d36eda04c58.mp3str"
+
+[deps]
+
+source_file="res://exports/preAlpha1/windows/assets/music/hijaq. - december. - 14 too tired to think of a title..mp3"
+dest_files=["res://.godot/imported/hijaq. - december. - 14 too tired to think of a title..mp3-d6953df72b4c78c8820b9d36eda04c58.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

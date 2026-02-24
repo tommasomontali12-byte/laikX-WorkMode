@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://s2yvro7tqbm3"
+path="res://.godot/imported/hijaq. - december. - 18 at all..mp3-02dc02dbb76d6022e99352df9f6d9526.mp3str"
+
+[deps]
+
+source_file="res://exports/preAlpha1/windows/assets/music/hijaq. - december. - 18 at all..mp3"
+dest_files=["res://.godot/imported/hijaq. - december. - 18 at all..mp3-02dc02dbb76d6022e99352df9f6d9526.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
