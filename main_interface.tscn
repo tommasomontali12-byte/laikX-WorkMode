@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cg04mwwg1balm" path="res://assets/icons/skip_next_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="7_a7kfw"]
 [ext_resource type="Texture2D" uid="uid://pws6cxde5gqy" path="res://assets/icons/fullscreen_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="7_mepy7"]
 [ext_resource type="Texture2D" uid="uid://dljktw6vf0ehg" path="res://assets/icons/pause_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="8_a00c7"]
+[ext_resource type="Script" uid="uid://b3pnmfi1wu3jg" path="res://song_name.gd" id="9_a00c7"]
 [ext_resource type="Texture2D" uid="uid://cm2qsvyyln3qp" path="res://assets/icons/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="9_jyvhp"]
 [ext_resource type="Texture2D" uid="uid://dyxokec7g4rns" path="res://assets/icons/captive_portal_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="9_udk6n"]
 [ext_resource type="PackedScene" uid="uid://cmw511f6iinto" path="res://settings.tscn" id="13_yo2di"]
@@ -198,6 +199,7 @@ offset_bottom = 88.0
 theme_override_font_sizes/font_size = 42
 text = "SONG NAME BY AUTHORY"
 clip_text = true
+script = ExtResource("9_a00c7")
 
 [node name="play" type="Button" parent="pip/musicPlayer" unique_id=1990961710]
 layout_mode = 0
