@@ -16,3 +16,4 @@ func _on_refresh_pressed() -> void:
 
 func _on_back_pressed() -> void:
 	$browserContainer/CefTexture.go_back()
+	print(1)
