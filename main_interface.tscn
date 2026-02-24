@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://dljktw6vf0ehg" path="res://assets/icons/pause_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="8_a00c7"]
 [ext_resource type="Texture2D" uid="uid://cm2qsvyyln3qp" path="res://assets/icons/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="9_jyvhp"]
 [ext_resource type="Texture2D" uid="uid://dyxokec7g4rns" path="res://assets/icons/captive_portal_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="9_udk6n"]
-[ext_resource type="PackedScene" uid="uid://b8m3fl13jnxwl" path="res://browser.tscn" id="12_wbo83"]
 [ext_resource type="PackedScene" uid="uid://cmw511f6iinto" path="res://settings.tscn" id="13_yo2di"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p4uil"]
@@ -86,6 +85,16 @@ icon = ExtResource("6_lx6jc")
 flat = true
 
 [node name="productivityTimer" type="Timer" parent="." unique_id=1988261193]
+
+[node name="finishedWindow" type="AcceptDialog" parent="." unique_id=1533583976]
+oversampling_override = 1.0
+title = "Workmode Finished"
+initial_position = 1
+size = Vector2i(250, 128)
+ok_button_text = "Okay"
+dialog_text = "Your Productivity Timer finished.
+We suggest to take a 5 Minutes break!"
+dialog_autowrap = true
 
 [node name="pressEnterPopup" type="ColorRect" parent="." unique_id=909602636]
 visible = false
@@ -240,11 +249,6 @@ layout_mode = 2
 icon = ExtResource("7_mepy7")
 flat = true
 icon_alignment = 1
-
-[node name="browser" parent="pip" unique_id=517005207 instance=ExtResource("12_wbo83")]
-initial_position = 3
-current_screen = 0
-visible = false
 
 [node name="mouseLockDisclamer" type="ColorRect" parent="pip" unique_id=1780101607]
 visible = false

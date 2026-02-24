@@ -23,9 +23,12 @@ func _on_start_button_pressed() -> void:
 
 
 func _on_productivity_timer_timeout() -> void:
-	print("take a break")
 	$productivityTimer.stop()
 	$pip/backgroundVideo.stop()
+	$pip/musicPlayer/audioPlayer.stop()
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	$pip.hide()
+	$finishedWindow.show()
 	Global.isProductivityActive=false
 
 @warning_ignore("unused_parameter")
@@ -46,24 +49,9 @@ func _process(delta: float) -> void:
 func _on_time_selector_editing_toggled(is_editing: bool) -> void:
 	$pressEnterPopup.visible = is_editing
 
-
-func _on_fullscreen_toggle_pressed() -> void:
-	if Global.isFullScreenEnabled:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-		$pip/buttonsContainer/fullscreenToggle.icon = fullscreenEnable
-		Global.isFullScreenEnabled=false
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-		$pip/buttonsContainer/fullscreenToggle.icon = fullscreenDisable
-		Global.isFullScreenEnabled=true
-
-
 func _on_settings_pressed() -> void:
 	$settings.show()
 
-
-func _on_browser_button_pressed() -> void:
-	$pip/browser.show()
 
 #===MOUSELOCK================================
 func _input(event: InputEvent) -> void:
@@ -78,9 +66,6 @@ func _input(event: InputEvent) -> void:
 	else:
 		pass
 
-
-		
-
 func toggle_mouse_capture() -> void:
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		# Releases the mouse and makes it visible again
@@ -88,8 +73,8 @@ func toggle_mouse_capture() -> void:
 	else:
 		# Locks the mouse to the center and hides it
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
-
+		
+#===TOP=BUTTONS====================
 func _on_pause_button_pressed() -> void:
 	if timerPaused:
 		$productivityTimer.paused=false
@@ -102,9 +87,22 @@ func _on_pause_button_pressed() -> void:
 		$pip/paused.show()
 		$pip/musicPlayer/audioPlayer.stream_paused=true
 
+func _on_browser_button_pressed() -> void:
+	pass
 
+func _on_fullscreen_toggle_pressed() -> void:
+	if Global.isFullScreenEnabled:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		$pip/buttonsContainer/fullscreenToggle.icon = fullscreenEnable
+		Global.isFullScreenEnabled=false
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		$pip/buttonsContainer/fullscreenToggle.icon = fullscreenDisable
+		Global.isFullScreenEnabled=true
+	
 func _on_close_pressed() -> void:
 	if Global.isProductivityActive:
+		
 		$productivityTimer.stop()
 		$pip.hide()
 		$pip/musicPlayer/audioPlayer.stop()
