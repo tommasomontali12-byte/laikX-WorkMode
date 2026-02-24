@@ -1,7 +1,7 @@
 extends Control
 
 ## Configuration
-@export_dir var music_directory: String = "res://assets/music/"
+@export_dir var music_directory: String = "assets/music/"
 @export var fade_duration: float = 1.2
 
 ## Icons
