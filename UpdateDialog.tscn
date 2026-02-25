@@ -1,6 +1,44 @@
 [gd_scene format=3 uid="uid://n085e7svv3u5"]
 
+[ext_resource type="Script" uid="uid://bllfxbh8nyl7l" path="res://update_dialog.gd" id="1_rqyi3"]
+
 [node name="UpdateDialog" type="Window" unique_id=1109087458]
 oversampling_override = 1.0
-position = Vector2i(0, 36)
-sharp_corners = true
+initial_position = 2
+size = Vector2i(500, 300)
+script = ExtResource("1_rqyi3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2031147353]
+offset_right = 504.0
+offset_bottom = 300.0
+
+[node name="VersionLabel" type="Label" parent="VBoxContainer" unique_id=1427201414]
+layout_mode = 2
+text = "v.0.5.2"
+horizontal_alignment = 1
+
+[node name="NotesBox" type="RichTextLabel" parent="VBoxContainer" unique_id=1407003371]
+custom_minimum_size = Vector2(400, 120)
+layout_mode = 2
+text = "UPDATE NOTES"
+fit_content = true
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer" unique_id=844280128]
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer" unique_id=224348011]
+layout_mode = 2
+text = "statusLabel"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1265125879]
+layout_mode = 2
+alignment = 1
+
+[node name="UpdateButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1635203321]
+layout_mode = 2
+text = "Update Now"
+
+[node name="SkipButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=714231486]
+layout_mode = 2
+text = "Skip for this time"
