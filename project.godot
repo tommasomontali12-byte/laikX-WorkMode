@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://ds6jssfb3wlc4"
+UpdateManager="*uid://bq8nt712qciv5"
 
 [display]
 

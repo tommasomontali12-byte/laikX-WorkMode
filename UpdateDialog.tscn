@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://n085e7svv3u5"]
+
+[node name="UpdateDialog" type="Window" unique_id=1109087458]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+sharp_corners = true
