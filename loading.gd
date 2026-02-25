@@ -21,6 +21,8 @@ var loaded_count: int = 0
 @onready var bg_rect = $background
 
 func _ready() -> void:
+	await get_tree().create_timer(2.0).timeout
+	UpdateManager.check_for_updates()
 	_scan_all_assets()
 	if load_queue.size() > 0:
 		_start_async_loading()
